@@ -14,10 +14,10 @@ export const postFilePaths = fs
   // Only include md(x) files
   .filter((path) => /\.mdx?$/.test(path));
 
-export const sortPostsByDate = (posts) => {
-  return posts.sort((a, b) => {
-    const aDate = new Date(a.data.date);
-    const bDate = new Date(b.data.date);
+export const sortPostsByDate = (posts: any) => {
+  return posts.sort((a: any, b: any) => {
+    const aDate = new Date(a.data.date).valueOf();
+    const bDate = new Date(b.data.date).valueOf();
     return bDate - aDate;
   });
 };
@@ -39,7 +39,7 @@ export const getPosts = () => {
   return posts;
 };
 
-export const getPostBySlug = async (slug) => {
+export const getPostBySlug = async (slug: string) => {
   const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
 
@@ -57,10 +57,10 @@ export const getPostBySlug = async (slug) => {
   return { mdxSource, data, postFilePath };
 };
 
-export const getNextPostBySlug = (slug) => {
+export const getNextPostBySlug = (slug: string) => {
   const posts = getPosts();
   const currentFileName = `${slug}.mdx`;
-  const currentPost = posts.find((post) => post.filePath === currentFileName);
+  const currentPost: any = posts.find((post) => post.filePath === currentFileName);
   const currentPostIndex = posts.indexOf(currentPost);
 
   const post = posts[currentPostIndex - 1];
@@ -75,10 +75,10 @@ export const getNextPostBySlug = (slug) => {
   };
 };
 
-export const getPreviousPostBySlug = (slug) => {
+export const getPreviousPostBySlug = (slug: string) => {
   const posts = getPosts();
   const currentFileName = `${slug}.mdx`;
-  const currentPost = posts.find((post) => post.filePath === currentFileName);
+  const currentPost: any = posts.find((post) => post.filePath === currentFileName);
   const currentPostIndex = posts.indexOf(currentPost);
 
   const post = posts[currentPostIndex + 1];

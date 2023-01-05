@@ -36,7 +36,7 @@ export default function PostPage({
   prevPost,
   nextPost,
   globalData,
-}) {
+} : any) {
   return (
     <Layout>
       <SEO
@@ -124,7 +124,7 @@ export default function PostPage({
   );
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params } : any) => {
   const globalData = getGlobalData();
   const { mdxSource, data } = await getPostBySlug(params.slug);
   const prevPost = getPreviousPostBySlug(params.slug);
