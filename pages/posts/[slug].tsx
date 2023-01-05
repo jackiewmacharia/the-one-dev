@@ -56,6 +56,10 @@ export default function PostPage({
         <main>
           <article className="prose dark:prose-dark">
             <MDXRemote {...source} components={components} />
+            <p className="italic antialiased text-center mt-12 opacity-60 ">
+              Don't mind the typos unless they're really bad, then feel free to
+              mind them as much as you like! (and send me a strongly worded raven about it so i can fix it) 
+            </p>
           </article>
           <section>
             <div
