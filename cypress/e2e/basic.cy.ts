@@ -7,3 +7,5 @@ describe('sample render test', () => {
     cy.get('p').contains('the one dev blog');
   });
 });
+
+export{}

@@ -5,7 +5,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 
 config.autoAddCss = false
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps } : any) {
   return (
     <>
       <span className="theme-bejamas" />
