@@ -2,7 +2,7 @@ const plugin = require('tailwindcss/plugin');
 const pluginTypography = require('@tailwindcss/typography');
 const { COLOR_THEMES, FONT_THEMES } = require('../themes');
 
-const THEME = process.env.BLOG_THEME || 'default';
+const THEME = process.env.BLOG_THEME || 'theonedev';
 const FONT_PRIMARY = process.env.BLOG_FONT_HEADINGS || 'sans-serif';
 const FONT_SECONDARY = process.env.BLOG_FONT_BODY || 'sans-serif';
 

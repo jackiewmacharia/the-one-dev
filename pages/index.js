@@ -14,9 +14,9 @@ export default function Index({ posts, globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
       <main className="w-full">
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
+        <p className="text-2xl lg:text-2xl text-center mb-12">
           {globalData.blogTitle}
-        </h1>
+        </p>
         <ul className="w-full">
           {posts.map((post) => (
             <li
@@ -37,6 +37,11 @@ export default function Index({ posts, globalData }) {
                   {post.data.description && (
                     <p className="mt-3 text-lg opacity-60">
                       {post.data.description}
+                    </p>
+                  )}
+                  {post.data.author && (
+                    <p className="mt-3 font-bold opacity-40">
+                      {post.data.author}
                     </p>
                   )}
                   <ArrowIcon className="mt-4" />
