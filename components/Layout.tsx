@@ -22,6 +22,7 @@ export function GradientBackground({
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const setAppTheme = () => {
+    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const darkMode = localStorage.getItem("theme") === "dark";
     const lightMode = localStorage.getItem("theme") === "light";
 
@@ -29,12 +30,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       document.documentElement.classList.add("dark");
     } else if (lightMode) {
       document.documentElement.classList.remove("dark");
+    } else {
+      if (darkQuery.matches) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
     }
     return;
   };
 
   const handleSystemThemeChange = () => {
-    var darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     darkQuery.onchange = (e) => {
       if (e.matches) {
