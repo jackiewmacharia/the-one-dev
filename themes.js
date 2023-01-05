@@ -44,6 +44,15 @@ exports.COLOR_THEMES = {
       'gradient-4': '#FFCC81',
     },
   },
+  theonedev: {
+    colors: {
+      primary: '#A288A6',
+      'gradient-1': '#BB9BB0',
+      'gradient-2': '#CCBCBC',
+      'gradient-3': '#F1E3E4',
+      'gradient-4': '#1C1D21',
+    }
+  }
 };
 
 exports.FONT_THEMES = {

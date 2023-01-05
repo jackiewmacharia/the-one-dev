@@ -15,6 +15,8 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -55,6 +57,30 @@ export default function PostPage({
           <article className="prose dark:prose-dark">
             <MDXRemote {...source} components={components} />
           </article>
+          <section>
+            <div
+              className="mt-12 text-primary"
+              style={{ display: 'flex', justifyContent: 'space-between' }}
+            >
+              <Link href="/">
+                <a aria-label="Go back home">
+                  <FontAwesomeIcon icon={faHome} style={{ fontSize: 30 }} />
+                </a>
+              </Link>
+              {frontMatter.author &&
+                (frontMatter.author_url ? (
+                  <a
+                    href={frontMatter.author_url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @{frontMatter.author}
+                  </a>
+                ) : (
+                  <p>{frontMatter.author}</p>
+                ))}
+            </div>
+          </section>
         </main>
         <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
           {prevPost && (

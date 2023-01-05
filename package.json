@@ -1,16 +1,11 @@
 {
-  "name": "nextjs-blog-theme",
-  "description": "A customizable Next.js and Tailwind blog starter. Designed by the Bejamas agency.",
-  "author": "Bejamas and Netlify Inc.",
-  "contributors": [
-    "Charlie Gerard",
-    "Prince Wilson",
-    "Tara Manicsic",
-    "Thom Krupa"
-  ],
-  "homepage": "https://github.com/netlify-templates/nextjs-blog-theme",
+  "name": "the-one-dev",
+  "description": "the one dev blog - built using the NextJS Blog template by Netlify and Bejamas: https://github.com/netlify-templates/nextjs-blog-theme",
+  "author": "Jackie Macharia",
+  "contributors": [],
+  "homepage": "https://github.com/jackiewmacharia/the-one-dev",
   "bugs": {
-    "url": "https://github.com/netlify-templates/nextjs-blog-theme/issues"
+    "url": "https://github.com/jackiewmacharia/the-one-dev/issues"
   },
   "scripts": {
     "dev": "next",
@@ -21,6 +16,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mapbox/rehype-prism": "^0.8.0",
     "@tailwindcss/typography": "^0.5.0",
     "classnames": "^2.3.1",
