@@ -1,12 +1,12 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { serialize } from 'next-mdx-remote/serialize';
-import rehypePrism from '@mapbox/rehype-prism';
-import remarkGfm from 'remark-gfm';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { serialize } from "next-mdx-remote/serialize";
+import rehypePrism from "@mapbox/rehype-prism";
+import remarkGfm from "remark-gfm";
 
 // POSTS_PATH is useful when you want to get the path to a specific file
-export const POSTS_PATH = path.join(process.cwd(), 'posts');
+export const POSTS_PATH = path.join(process.cwd(), "posts");
 
 // postFilePaths is the list of all mdx files inside the POSTS_PATH directory
 export const postFilePaths = fs
@@ -60,14 +60,16 @@ export const getPostBySlug = async (slug: string) => {
 export const getNextPostBySlug = (slug: string) => {
   const posts = getPosts();
   const currentFileName = `${slug}.mdx`;
-  const currentPost: any = posts.find((post) => post.filePath === currentFileName);
+  const currentPost: any = posts.find(
+    (post) => post.filePath === currentFileName
+  );
   const currentPostIndex = posts.indexOf(currentPost);
 
   const post = posts[currentPostIndex - 1];
   // no prev post found
   if (!post) return null;
 
-  const nextPostSlug = post?.filePath.replace(/\.mdx?$/, '');
+  const nextPostSlug = post?.filePath.replace(/\.mdx?$/, "");
 
   return {
     title: post.data.title,
@@ -78,14 +80,16 @@ export const getNextPostBySlug = (slug: string) => {
 export const getPreviousPostBySlug = (slug: string) => {
   const posts = getPosts();
   const currentFileName = `${slug}.mdx`;
-  const currentPost: any = posts.find((post) => post.filePath === currentFileName);
+  const currentPost: any = posts.find(
+    (post) => post.filePath === currentFileName
+  );
   const currentPostIndex = posts.indexOf(currentPost);
 
   const post = posts[currentPostIndex + 1];
   // no prev post found
   if (!post) return null;
 
-  const previousPostSlug = post?.filePath.replace(/\.mdx?$/, '');
+  const previousPostSlug = post?.filePath.replace(/\.mdx?$/, "");
 
   return {
     title: post.data.title,

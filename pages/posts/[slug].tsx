@@ -1,22 +1,22 @@
-import { getGlobalData } from '../../utils/global-data';
+import { getGlobalData } from "../../utils/global-data";
 import {
   getNextPostBySlug,
   getPostBySlug,
   getPreviousPostBySlug,
   postFilePaths,
-} from '../../utils/mdx-utils';
+} from "../../utils/mdx-utils";
 
-import { MDXRemote } from 'next-mdx-remote';
-import Head from 'next/head';
-import Link from 'next/link';
-import ArrowIcon from '../../components/ArrowIcon';
-import CustomLink from '../../components/CustomLink';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import Layout, { GradientBackground } from '../../components/Layout';
-import SEO from '../../components/SEO';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { MDXRemote } from "next-mdx-remote";
+import Head from "next/head";
+import Link from "next/link";
+import ArrowIcon from "../../components/ArrowIcon";
+import CustomLink from "../../components/CustomLink";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import Layout, { GradientBackground } from "../../components/Layout";
+import SEO from "../../components/SEO";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -36,7 +36,7 @@ export default function PostPage({
   prevPost,
   nextPost,
   globalData,
-} : any) {
+}: any) {
   return (
     <Layout>
       <SEO
@@ -56,11 +56,16 @@ export default function PostPage({
         <main>
           <article className="prose dark:prose-dark">
             <MDXRemote {...source} components={components} />
+            <p className="italic antialiased text-center mt-12 opacity-60 ">
+              Don&apos;t mind the typos unless they&apos;re really bad, then
+              feel free to mind them as much as you like! (and send me a
+              strongly worded raven about it so i can fix it)
+            </p>
           </article>
           <section>
             <div
               className="mt-12 text-primary"
-              style={{ display: 'flex', justifyContent: 'space-between' }}
+              style={{ display: "flex", justifyContent: "space-between" }}
             >
               <Link href="/">
                 <a aria-label="Go back home">
@@ -111,7 +116,7 @@ export default function PostPage({
           )}
         </div>
       </article>
-      <Footer copyrightText={globalData.footerText} />
+      <Footer />
       <GradientBackground
         variant="large"
         className="absolute -top-32 opacity-30 dark:opacity-50"
@@ -124,7 +129,7 @@ export default function PostPage({
   );
 }
 
-export const getStaticProps = async ({ params } : any) => {
+export const getStaticProps = async ({ params }: any) => {
   const globalData = getGlobalData();
   const { mdxSource, data } = await getPostBySlug(params.slug);
   const prevPost = getPreviousPostBySlug(params.slug);
@@ -144,7 +149,7 @@ export const getStaticProps = async ({ params } : any) => {
 export const getStaticPaths = async () => {
   const paths = postFilePaths
     // Remove file extensions for page paths
-    .map((path) => path.replace(/\.mdx?$/, ''))
+    .map((path) => path.replace(/\.mdx?$/, ""))
     // Map the path into the static paths object required by Next.js
     .map((slug) => ({ params: { slug } }));
 
