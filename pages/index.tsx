@@ -41,7 +41,7 @@ export default function Index({ posts, globalData } : any) {
                   )}
                   {post.data.author && (
                     <p className="mt-3 font-bold opacity-40">
-                      {post.data.author}
+                      by {post.data.author}
                     </p>
                   )}
                   <ArrowIcon className="mt-4" />
@@ -51,7 +51,7 @@ export default function Index({ posts, globalData } : any) {
           ))}
         </ul>
       </main>
-      <Footer copyrightText={globalData.footerText} />
+      <Footer />
       <GradientBackground
         variant="large"
         className="fixed top-20 opacity-40 dark:opacity-60"
