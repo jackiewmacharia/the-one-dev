@@ -45,7 +45,7 @@ export default function Index({ posts, globalData }: any) {
                   )}
                   {post.data.author && (
                     <p className="mt-3 font-bold opacity-40">
-                      by {post.data.author}
+                      {post.data.author}
                     </p>
                   )}
                   <ArrowIcon className="mt-4" />

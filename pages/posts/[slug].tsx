@@ -42,6 +42,8 @@ export default function PostPage({
       <SEO
         title={`${frontMatter.title} - ${globalData.name}`}
         description={frontMatter.description}
+        author={frontMatter.author}
+        date={frontMatter.date}
       />
       <Header name={globalData.name} />
       <article className="px-6 md:px-0">
@@ -81,14 +83,14 @@ export default function PostPage({
                   <FontAwesomeIcon icon={faHome} style={{ fontSize: 30 }} />
                 </a>
               </Link>
-              {frontMatter.author &&
+              {frontMatter.author_handle &&
                 (frontMatter.author_url ? (
                   <a
                     href={frontMatter.author_url}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    @{frontMatter.author}
+                    @{frontMatter.author_handle}
                   </a>
                 ) : (
                   <p>{frontMatter.author}</p>
