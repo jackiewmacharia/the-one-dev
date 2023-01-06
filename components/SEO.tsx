@@ -46,8 +46,8 @@ export default function SEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="/banners/the-one-dev-tw-card.jpg" />
-      
-      {/* Google search verification */}
+
+      {/* Google site verification */}
       <meta name="google-site-verification" content="IhsaZQPdODpL7f9SZOm9CmzjEn068piaQJ9oskfRPOM" />
     </Head>
   );
