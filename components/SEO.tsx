@@ -5,11 +5,13 @@ export default function SEO({
   description,
   author,
   date,
+  author_handle,
 }: {
   title: string;
   description: string;
   author?: string;
   date?: string;
+  author_handle?: string;
 }) {
   return (
     <Head>
@@ -41,14 +43,21 @@ export default function SEO({
       <meta property="og:image" content="/banners/the-one-dev-tw-card.jpg" />
 
       {/* Twitter */}
-      <meta name="twitter:card" content={description} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@jackiewmacharia" />
+      <meta
+        name="twitter:creator"
+        content={`@${author_handle}` || "@jackiewmacharia"}
+      />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="/banners/the-one-dev-tw-card.jpg" />
 
       {/* Google site verification */}
-      <meta name="google-site-verification" content="IhsaZQPdODpL7f9SZOm9CmzjEn068piaQJ9oskfRPOM" />
+      <meta
+        name="google-site-verification"
+        content="IhsaZQPdODpL7f9SZOm9CmzjEn068piaQJ9oskfRPOM"
+      />
     </Head>
   );
 }
