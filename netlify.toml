@@ -14,8 +14,3 @@
   [plugins.inputs]
       record = true
       group = "Testing Built Site"
-
-[[redirects]]
-  from = "/test"
-  to = "/posts/coding-post-high-school-kenya"
-  status = 301
