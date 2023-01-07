@@ -39,6 +39,7 @@ export default function SEO({
       <meta property="og:title" content={title} />
       <meta property="og:url" content="https://theonedev.blog" />
       <meta property="og:site_name" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="https://theonedev.blog/banners/the-one-dev-tw-card.jpg" />
 
@@ -52,6 +53,9 @@ export default function SEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="https://theonedev.blog/banners/the-one-dev-tw-card.jpg" />
+      
+      {/* FB */}
+      <meta property="fb:app_id" content="730618755060589"/>
 
       {/* Google site verification */}
       <meta
