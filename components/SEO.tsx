@@ -51,7 +51,7 @@ export default function SEO({
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="/banners/the-one-dev-tw-card.jpg" />
+      <meta name="twitter:image" content="https://theonedev.blog/banners/the-one-dev-tw-card.jpg" />
 
       {/* Google site verification */}
       <meta
