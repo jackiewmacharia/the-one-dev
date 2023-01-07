@@ -17,5 +17,5 @@
 
 [[redirects]]
   from = "/test"
-  to = "/coding-post-high-school-kenya"
+  to = "/posts/coding-post-high-school-kenya"
   status = 301
