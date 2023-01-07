@@ -14,9 +14,3 @@
   [plugins.inputs]
       record = true
       group = "Testing Built Site"
-
-[[redirects]]
-  from = "https://theonedev.netlify.com/*"
-  to = "https:/www.theonedev.blog/:splat"
-  status = 301
-  force = true
