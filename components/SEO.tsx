@@ -40,7 +40,7 @@ export default function SEO({
       <meta property="og:url" content="https://theonedev.blog" />
       <meta property="og:site_name" content={title} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="/banners/the-one-dev-tw-card.jpg" />
+      <meta property="og:image" content="https://theonedev.blog/banners/the-one-dev-tw-card.jpg" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
