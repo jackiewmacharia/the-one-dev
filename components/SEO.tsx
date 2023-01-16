@@ -18,8 +18,6 @@ export default function SEO({
 }) {
   const [url, setUrl] = useState(`https://${domain}`);
 
-  console.log(url, "url>>>>")
-
   useEffect(() => {
     setUrl(window.location.href);
   });
