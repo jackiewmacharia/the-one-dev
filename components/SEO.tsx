@@ -26,6 +26,8 @@ export default function SEO({
     <Head>
       <title>{title}</title>
 
+      <meta name="description" content={description} />
+
       {/* Open Graph */}
       <meta name="description" content={description} />
       <meta name="author" content={author || ""} />
