@@ -5,6 +5,9 @@ export const getGlobalData = () => {
   const blogTitle = process.env.BLOG_TITLE
     ? decodeURI(process.env.BLOG_TITLE)
     : "the one dev blog";
+  const domain = process.env.BLOG_DOMAIN
+    ? decodeURI(process.env.BLOG_DOMAIN)
+    : "theonedev.blog";
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
     : "All rights reserved.";
@@ -12,6 +15,7 @@ export const getGlobalData = () => {
   return {
     name,
     blogTitle,
+    domain,
     footerText,
   };
 };

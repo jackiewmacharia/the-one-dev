@@ -45,6 +45,7 @@ export default function PostPage({
         author={frontMatter.author}
         date={frontMatter.date}
         author_handle={frontMatter.author_handle}
+        domain={globalData.domain}
       />
       <Header name={globalData.name} />
       <article className="px-6 md:px-0">
