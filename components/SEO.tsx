@@ -18,6 +18,8 @@ export default function SEO({
 }) {
   const [url, setUrl] = useState(`https://${domain}`);
 
+  console.log(url, "url>>>>")
+
   useEffect(() => {
     setUrl(window.location.href);
   });
@@ -29,7 +31,6 @@ export default function SEO({
       <meta name="description" content={description} />
 
       {/* Open Graph */}
-      <meta name="description" content={description} />
       <meta name="author" content={author || ""} />
       <meta
         name="publish_date"
@@ -68,6 +69,9 @@ export default function SEO({
         name="twitter:image"
         content="https://theonedev.blog/banners/the-one-dev-tw-card.jpg"
       />
+
+      {/* FB */}
+      <meta property="fb:app_id" content="730618755060589"/>
 
       {/* Google site verification */}
       <meta
