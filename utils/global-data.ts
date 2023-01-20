@@ -1,4 +1,6 @@
-export const getGlobalData = () => {
+import { GlobalData } from "./types";
+
+export const getGlobalData = (): GlobalData => {
   const name = process.env.BLOG_NAME
     ? decodeURI(process.env.BLOG_NAME)
     : "the one dev";
