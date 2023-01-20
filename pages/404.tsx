@@ -20,6 +20,7 @@ const NotFound = ({ globalData }: { globalData: GlobalData }) => {
       <Image
         width={4608}
         height={2304}
+        priority={true}
         src="/banners/404-transparent.png"
         alt="banner graphic of a guy seemingly getting caught up in a 404 graphic while running from it"
       />
