@@ -20,7 +20,7 @@ export default function SEO({
 
   useEffect(() => {
     setUrl(window.location.href);
-  });
+  }, []);
 
   return (
     <Head>
