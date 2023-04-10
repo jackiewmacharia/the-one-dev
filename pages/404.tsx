@@ -15,21 +15,21 @@ const NotFound = ({ globalData }: { globalData: GlobalData }) => {
         description={globalData.blogTitle}
         domain={globalData.domain}
       />
-      <Header name={globalData.name} />
+      <Header />
 
       <Image
         width={4608}
-        height={2304}
+            height={2304}
         priority={true}
-        src="/banners/404-transparent.png"
-        alt="banner graphic of a guy seemingly getting caught up in a 404 graphic while running from it"
+        src="/banners/404.png"
+        alt="404 banner graphic of a guy seemingly lost in space captioned '404, page not found"
       />
 
       <Link href="/">
         <button
           type="button"
           aria-label="go back home"
-          className="flex items-center h-full pr-2 bg-gradient-2 dark:text-gradient-4 rounded-3xl flex justify-center align-center p-2 w-40 h-10"
+          className="flex items-center h-full pr-2 mt-20 bg-gradient-2 dark:text-gradient-3 rounded-3xl flex justify-center align-center p-2 w-40 h-10"
         >
           Go Back Home
         </button>

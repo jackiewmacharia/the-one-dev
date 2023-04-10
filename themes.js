@@ -46,6 +46,33 @@ exports.COLOR_THEMES = {
   },
   theonedev: {
     colors: {
+      primary: "#FCA311",
+      "gradient-1": "#000000",
+      "gradient-2": "#E5E5E5",
+      "gradient-3": "#14213D",
+      "gradient-4": "#E5E5E5",
+    },
+  },
+  theonedev2: {
+    colors: {
+      primary: "#2779a7",
+      "gradient-1": "#49c5b6",
+      "gradient-2": "#ffffff",
+      "gradient-3": "#ffffff",
+      "gradient-4": "#49c5b6",
+    },
+  },
+  theonedev3: {
+    colors: {
+      primary: "#1F1F1F",
+      "gradient-1": "#FF93AD",
+      "gradient-2": "#FEFDFB",
+      "gradient-3": "#FEFDFB",
+      "gradient-4": "#FF93AD",
+    },
+  },
+  theonedev4: {
+    colors: {
       primary: "#A288A6",
       "gradient-1": "#BB9BB0",
       "gradient-2": "#CCBCBC",
@@ -56,7 +83,7 @@ exports.COLOR_THEMES = {
 };
 
 exports.FONT_THEMES = {
-  "sans-serif": `ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+  "sans-serif": `ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Questrial"`,
   serif: `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif`,
   monospace: `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
 };
