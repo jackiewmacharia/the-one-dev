@@ -16,11 +16,8 @@ export default function Index({ posts, globalData }: any) {
         description={globalData.blogTitle}
         domain={globalData.domain}
       />
-      <Header name={globalData.name} />
+      <Header />
       <main className="w-full">
-        <p className="text-2xl lg:text-2xl text-center mb-12">
-          {globalData.blogTitle}
-        </p>
         <ul className="w-full">
           {posts.map((post: any) => (
             <li

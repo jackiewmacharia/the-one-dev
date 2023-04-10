@@ -49,7 +49,7 @@ export default function SEO({
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://theonedev.blog/banners/the-one-dev-tw-card.jpg"
+        content="https://theonedev.blog/banners/tod-full-website-banner.png"
       />
 
       {/* Twitter */}
@@ -65,7 +65,7 @@ export default function SEO({
       />
       <meta
         name="twitter:image"
-        content="https://theonedev.blog/banners/the-one-dev-tw-card.jpg"
+        content="https://theonedev.blog/banners/tod-full-website-banner.png"
       />
 
       {/* FB */}
