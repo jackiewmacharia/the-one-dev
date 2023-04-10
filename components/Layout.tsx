@@ -31,10 +31,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     } else if (lightMode) {
       document.documentElement.classList.remove("dark");
     } else {
-      if (darkQuery.matches) {
-        document.documentElement.classList.add("dark");
-      } else {
+      if (!darkQuery.matches) {
         document.documentElement.classList.remove("dark");
+      } else {
+        // default to dark mode
+        document.documentElement.classList.add("dark");
       }
     }
     return;
